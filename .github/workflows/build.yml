@@ -1,6 +1,9 @@
 name: "Build Image"
 
 on:
+  schedule:
+    # rebuild daily @420am
+    - cron: "20 4 * * *"
   pull_request: {}
   push:
     branches:
